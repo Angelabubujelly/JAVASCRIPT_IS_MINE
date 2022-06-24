@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding:0;}
+        body{line-height: 1;}
+        #wrap{height: 5000px;padding-top: 2000px;}
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            // offset() : 선택한 요소가 문서에서 수직으로 얼마나 떨어져있는지에 대한 값을 반환.
+var topNum =$("h1").offset().top;
+$(window).scrollTop(topNum);
+var sct =$(window).scrollTop();
+console.log(sct);
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>위치 메서드</h1>
+    </div>
+</body>
+</html>

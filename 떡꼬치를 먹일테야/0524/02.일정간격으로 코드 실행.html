@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+     //setInterval(): 일정한 시간 간격으로 코드를 반복 실행
+    // setTimeout() :일정한 시간 후에 코드를 실행하고 종료.
+    var addNum = 0;
+    var subNum = 1000;
+
+    var auto1 = setInterval(function(){
+        addNum++;
+        console.log("addNum:"+addNum);},3000);
+
+    var auto2 = setInterval(function(){
+        subNum--;
+        console.log("subNum:"+subNum);},3000);
+</script>
+</head>
+<body>
+    <button onclick="clearIntercal(auto1)">증가 정지</button>
+    <button onclick="clearIntercal(auto2)">감소 정지</button>
+</body>
+</html>

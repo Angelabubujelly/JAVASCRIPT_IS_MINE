@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showInfo(){
+            alert(arguments[0]+"님 "+"어서오세요, 진료보시는 곳은 "+arguments[1]+"입니다.");
+        }
+    showInfo("밤블비","왜이렇게 귀여울과");
+        function sum() {
+            var sum = arguments[0]+arguments[1]+arguments[2];
+            document.write(sum,"<br>");
+        }
+        sum(1,2,3);
+
+        function sun(){
+            var sum2 = 0;
+            for(var i=0; i<arguments.length; i++)
+            sum2+=arguments[i];
+            document.write(sum2,"<br>");
+        }
+        sun(1,2,3,4,5,6,6,7,8,8,9);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

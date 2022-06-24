@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var id = "bleble";
+        var pw = "5252";
+
+        var user_id = prompt("아이디를 입력하쇼");
+        var user_pw = prompt("비번도 입력하쇼");
+
+        if (id==user_id){
+            if(pw==user_pw){
+                document.write(id+"님 환영합니다.");
+            } else{
+            alert("비밀번호가 틀렸습니다.");
+            location.reload();
+        }      
+        } else {
+            alert("ID가 틀렸습니다.");
+            location.reload();
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

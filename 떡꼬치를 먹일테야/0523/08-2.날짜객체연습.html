@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var today = new Date();
+        var nowMonth = today.getMonth()+1;
+        nowDate = today.getDate();
+        nowDay = today.getDay();
+        var dayString = "";
+        switch(nowDay) {
+            case 0: dayString ='일';break;
+            case 1: dayString='월' ;break;
+            case 2: dayString='화';break;
+            case 3: dayString='수';break;
+            case 4: dayString='목';break;
+            case 5: dayString='금';break;
+            case 6: dayString='토';
+        }
+
+        document.write("<h1>오늘 날짜 정보</h1>");
+        document.write("현재 월 : " + nowMonth,"<br>");
+        document.write("현재 일 : " + nowDate,"<br>");
+        document.write("현재 요일 : " + dayString,"<br>");
+
+
+        var imp = new Date(2022,8,14);
+        var theMonth = imp.getMonth();
+        theDate = imp.getDate();
+        theDay =imp.getDay();
+        var theDD ="";
+        switch(theDay) {
+            case 0: theDD ='일';break;
+            case 1: theDD='월' ;break;
+            case 2: theDD='화';break;
+            case 3: theDD='수';break;
+            case 4: theDD='목';break;
+            case 5: theDD='금';break;
+            case 6: theDD='토';
+        }
+
+
+        document.write("<h1>그날의 날짜 정보</h1>");
+        document.write("그날은 " + theMonth+"월 입니다.<br>");
+        document.write("그날은 " + theDate+"일 입니다.<br>");
+        document.write("그날은 " + theDD+"요일 입니다.<br>");
+
+    
+//지정한 날짜에서 현재 날짜를 빼면 지금부터 그날까지 남은 시간을 알 수 있음(밀리초 단위로.)
+//계산한 값을 일 단위로 계산한 다음, 오늘 날짜까지 포함시키기 위해 Math.ceil()메서드를 사용해 반올림.
+
+        var endDay = new Date(2022,9,14);
+        var diffDate = endDay.getTime()-today.getTime();
+        // 1초 = 1000 밀리세컨드, 1분 = 1000 * 60, 1시간 = 1000*60*60, 1일 = 1000*60*60*24
+        var result =Math.ceil(diffDate /(1000*60*60*24));
+        document.write('<h2>그날까지 남은 날짜</h2>');
+        document.write(result+"일");
+   
+    </script>
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

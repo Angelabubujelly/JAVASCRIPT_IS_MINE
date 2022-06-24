@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+arguments를 사용해 매개변수를 사용하는 것처럼 함수 호출문의 값을 받아올 수 있음!
+함수 정의문의 매개변수가 없는 상태에서 데이터를 전달해 함수를 호출하면 그 값은 배열에 저장됨.
+함수 정의문에서는 그 값을 arguments라는 변수로 참조한다.
+
+기본형| function 함수명(){
+    arguments;
+}
+함수명(데이터1,데이터2,데이터3);
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    
+
+다음은 매개변수를 생략한 함수 호출문에서 3개의 숫자형 데이터를 전달하는 예.
+숫자형 데이터는 배열에 저장되고, arguments변수로 참조할 수 있음. arguments의 인덱스를 이용해 배열에 저장된 값을 불러와 합을 구하여 결괏값을 화면에 출력!
+  -->
+    <script>
+        function sum1(){
+            var sum1 = arguments[0]+arguments[1]+arguments[2];
+            document.write(sum1,"<br>");
+        }
+        sum1(10,20,30);
+    </script>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
+   매개변수 없이 함수 호출문에 전달된 값들은 배열로 저장됨. 따라서 다음과 같이 for문으로 전달받은 데이터의 개수만큼 반복해서 sum에 값을 더함.
+   이때 arguments를 사용하면 함수 호출문에서 유연하게 값을 전달할 수 있음!
+    -->
+    <script>
+        function sum2(){
+            var sum2 =0;
+            for(var i =0; i<arguments.length;i++){
+                sum2+=arguments[i];
+            }
+            document.write(sum2);
+        }
+        sum2(10,20,50);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var color = ["lightsalmon","lightblue","lightpink","lightgreen"];
+        var i = 0;
+        function chngeColor(){
+            i++;
+            if(i>=color.length){
+                i=0;
+            }
+    /* getElementById()는 id값을 이요해 문서 객체(Tag)를 선택하는 메서드 ≒  css의 ID 선택자.
+        선택한 문서 객체에 스타일을 적용하기 위해선 문서 객체의 style에 접근하고 적용하고자 하는 속성에 새 값을 입력해야 함!
+
+        문서 객체.style.스타일 속성= 새 값;
+        예) id 값이 "theBody"인 요소의 배경색을 color[i]로 적용합니다.
+        = document.getElementById("theBody").style.backgroundColor = color[i];
+    */
+            var bodyTag=document.getElementById("theBody");
+            bodyTag.style.backgroundColor = color[i];
+        }
+    </script>
+</head>
+<body id="theBody">
+    <button onclick="chngeColor()">배경색 바꿔봐용</button>
+</body>
+</html>

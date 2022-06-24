@@ -1,0 +1,23 @@
+/* 전체 */
+* {margin: 0 auto; list-style: none; text-decoration: none; color:black;
+     padding: 0;}
+body {width:1200px;}
+a {color: inherit;}
+a:hover {color: inherit;}
+
+/* header */
+header {height: 150px;}
+header img {float:left; width: 100px; height: 100px; margin-top: 25px;}
+header nav {float: right; margin-top: 50px; padding: 10px;} 
+.nav {width: 600px; height: 30px;}
+.nav > li {float: left; width: 200px; position: relative; text-align: center;
+      padding: 5px 0;}
+.nav > li:hover {background-color: #042B74; color:white;}
+.submenu {display: none;
+          width: 100%; position: absolute; z-index: 1; margin-top: 5px;}
+.submenu>li {padding: 5px 0; z-index: 2; background: rgba(255,255,255,0.6);}
+.submenu>li:hover {background: #5853EB; color:white}
+/* 본문이미지 */
+.slide {clear: both; height:450px; position: relative; margin-top: 10px; 
+          overflow: hidden; }
+.slide>div {position: absolute; display: flex;}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{text-align: center;}
+        img{vertical-align: middle; width: 400px; height: 430px;}
+        .arrow{width: 40px; height: 40px; margin: 50px;}
+        #gallery{width: 400px; height: 430px;}
+    </style>
+    <script>
+        var num=1;
+        function nextGallery(){
+            num++;
+            if(num>7)
+            num=1;
+            document.getElementById("gallery").src="img/img"+num+".png";
+        }
+        function prevGallery(){
+            num--;
+            if(num<1)
+            num=7;
+            document.getElementById("gallery").src="img/img"+num+".png";
+        }
+    </script>
+</head>
+<body>
+    <!-- 순서는 틀을 먼저 짜고 스크립트를 짜는겨 언 제 나  -->
+    <h1>♨강철의 갤러리에 오신 것을 환영합니다♨</h1>
+<img src="img/left-arrow.png" alt="다음 화살표" class="arrow" onclick="nextGallery()">
+<img src="img/img1.png" alt="그림" id="gallery">
+<img src="img/right-arrow.png" alt="이전 화살표" class="arrow" onclick="prevGallery()">
+<br><br><br>
+<button onclick="prevGallery">이전</button>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<button onclick="nextGallery">다음</button>
+
+</body>
+</html>

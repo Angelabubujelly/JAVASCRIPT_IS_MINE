@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var count =0;
+        //일반함수
+        myFun();
+        function myFun(){
+            count++;
+            document.write("javascript"+count+"<br>")
+        }
+        // 익명함수는 함수를 구현 뒤 호출해야 함
+        myFun();
+        // varFun(); ☜ 이거 주석처리 안 해놓으면 뒤에 실행 ㄴㄴ
+        var varFun = function(){
+            count++;
+            document.write("javascript"+count+"<br>");
+        }
+        varFun();
+        myFun();
+    </script>
+</head>
+<body>
+    <button onclick="varFun()">눌러봥용</button>
+</body>
+</html>

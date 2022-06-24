@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var car = new Object();
+        car.color = "grey";
+        car.price= 2;
+        car.info = function(){
+            document.write("내 car의 색:"+this.color,"<br>");
+            document.write("내 car의 가격:"+this.price,"억원<br>");
+        }
+
+        var audio = {
+            color:"gold", price:1,
+            info:function(){
+                document.write("내 audio의 색:"+this.color,"<br>");
+                document.write("내 audio의 가격:"+this.price,"억원<br>");
+            }
+        };
+
+        document.write("<h1>car객체 메서드 호출</h1>");
+        car.info();
+        document.write("<h1>audio객체 메서드 호출</h1>");
+        audio.info();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

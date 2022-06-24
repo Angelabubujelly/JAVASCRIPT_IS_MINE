@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/signform.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/footers/">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/signform.js"></script>
+    <!-- 다음 지도 -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="daumApi.js"></script> -->
+    <!-- 다음지도 -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+
+
+
+
+  
+<!-- header -->
+
+<header>
+ <a href="mainpage.html"><img src="img/logo.png" alt="logoimg" id="logo"></a>
+</header>
+
+  <ul class="tabs">
+    <li id="indi_btn">
+      <a href="#individual" id="personButton">개인회원</a>
+    </li>
+    <li id="comp_btn">
+      <a href="#company" id="companyButton">기업회원</a>
+    </li>
+  </ul>
+<!-- contatinter -->
+<form>
+<!-- 개인회원 -->
+
+  <div id="individual" class="form-action show container-fluid row justify-content-center align-items-center">
+      <div class="mb-3 col-md-7">
+        <p class="fw-bold">아이디</p>
+          <input type="text" name="id" class="form-control" required>
+          <div class="invalid-feedback">
+            아이디를 입력하세요.
+          </div>
+      </div>
+      <div class="mb-3 col-md-7">
+          <p class="fw-bold">비밀번호</p>
+            <input type="password" name="password" class="form-control" required>
+            <div class="invalid-feedback">
+              비밀번호를 입력하세요.
+            </div>
+      </div>
+      <div class="mb-3 col-md-7">
+          <p class="fw-bold">비밀번호 재확인</p>
+            <input type="password" name="confirmpassword" class="form-control" required>
+            <div class="invalid-feedback">
+              비밀번호를 다시 입력하세요.
+            </div>
+      </div>
+      <div class="mb-3 col-md-7">
+          <p class="fw-bold">이름</p>
+            <input type="text" name="name" class="form-control"required>
+            <div class="invalid-feedback">
+            이름을 입력하세요.
+            </div>
+      </div>
+<!--  -->
+<div class="col-md-7">
+  <label id="birth" for="birth" class="form-label fw-bold">생년월일 <span class="caution">⚠만 14세 이상 가입가능</span></label>
+    <div class="row mb-3  justify-content-center align-items-center">
+    <div class="col-md-4">
+      <input name="year" type="text" class="form-control " id="birth" placeholder="년(4자)" required>
+        <div class="invalid-feedback"></div>
+    </div>
+    <div class="col-md-4">
+      <input name="moonth" type="text" class="form-control " id="birth" placeholder="월" required>
+        <div class="invalid-feedback"></div>
+    </div>
+    <div class="col-md-4">
+      <input name="day" type="text" class="form-control " id="birth" placeholder="일" required>
+        <div class="invalid-feedback"></div>
+    </div>
+  </div>
+</div>
+
+      <div class="mb-3 col-md-7">
+          <label for="gender" class="form-label fw-bold">성별</label>
+            <select class="form-select" id="gender" required>
+              <option value="">성별</option>
+              <option>여성</option>
+              <option>남성</option>
+            </select>
+          <div class="invalid-feedback">
+            성별을 선택하세요.
+          </div>
+      </div>
+
+      <div class="mb-3 col-md-7">
+        <label for="exampleFormControlInput1" class="form-label fw-bold">이메일</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      </div>
+      <div class="row g-1" id="tel">
+        <label for="phoneNum" class="form-label fw-bold">전화번호</label>
+        <div class=" col-md-3">
+          <select class="form-select" id="phone" required>
+            <option value="">010</option>
+              <option>012</option>
+              <option>013</option>
+              <option>015</option>
+            </select>
+          <div class="invalid-feedback">
+            앞번호를 선택하세요.
+          </div>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control" id="phoneBer" placeholder="'-'없이 입력" required>
+              <div class="invalid-feedback">
+                전화번호를 입력하세요.
+              </div>
+        </div>
+      <div class=" mb-3 " >
+        <p class="fw-bold" id="adressCom">주소</p>
+          <!-- <input type="text" placeholder="" name="post1" id="post1" class="form-control" value="" style="display:inline-block;width:100px;" readonly>  -->
+          <input type="text" placeholder="" name="post1" id="post1" class="form-control mb-1 " value="" style="display:inline-block;width:100px;"> 
+          <button id="search" onclick="sample6_execDaumPostcode()"  style="color: white; background-color: #A5E374;">주소검색</button>
+          <input type="text"  name="address1" id="address1" class="form-control  mb-1" value="" placeholder="주소">
+          <input type="text" name="address1" id="address1" class="form-control mb-3 col-md-7" value="" placeholder="상세주소">
+        </div>
+        <div id="signUp" >
+          <button type="submit" value="Send" class="btn-xlarge"  style="color: white; background-color: #A5E374;">가입하기</button>
+        </div>
+      </div>
+    </div>
+
+      <!-- 기업회원 -->
+   
+    <div>
+      <div id="company" class="form-action hide container-fluid row justify-content-center align-items-center">
+        <div class="mb-3 col-md-7">
+          <p class="fw-bold">아이디</p>
+            <input type="text" name="comId" class="form-control" required>
+            <div class="invalid-feedback">
+              아이디를 입력하세요.
+            </div>
+        </div>
+        <div class="mb-3 col-md-7">
+            <p class="fw-bold">비밀번호</p>
+              <input type="password" name="comPassword" class="form-control" required>
+              <div class="invalid-feedback">
+                비밀번호를 입력하세요.
+              </div>
+        </div>
+        <div class="mb-3 col-md-7">
+            <p class="fw-bold">비밀번호 재확인</p>
+              <input type="password" name="comConfirmpassword" class="form-control" required>
+              <div class="invalid-feedback">
+                비밀번호를 다시 입력하세요.
+              </div>
+        </div>
+        <div class="mb-3 col-md-7">
+            <p class="fw-bold">회사명</p>
+              <input type="text" name="companyName" class="form-control"required>
+              <div class="invalid-feedback">
+              회사명을 입력하세요.
+              </div>
+        </div>
+        <div class="mb-3 col-md-7">
+          <p class="fw-bold">사업자 등록번호</p>
+            <input type="text" name="companyNum" class="form-control"required>
+            <div class="invalid-feedback">
+              사업자 등록번호를 입력하세요.
+            </div>
+          </div>    
+        <div class="mb-3 col-md-7">
+          <p class="fw-bold">증빙서류 첨부</p>
+          <input class="form-control" type="file" id="formFile">
+          <div class="invalid-feedback">
+            증빙서류를 첨부하세요
+            </div>
+        </div>
+    
+      <div class="mb-3 col-md-7">
+          <p class="fw-bold">대표자명</p>
+          <input type="text" name="representative" class="form-control" placeholder="">
+      </div>
+      <div class="mb-3 col-md-7">
+          <p class="fw-bold">이메일</p>
+          <input type="text" name="email" class="form-control" placeholder="name@example.com">
+      </div>
+      <div class="row g-1" id="tel">
+        <label for="phoneNum" class="form-label fw-bold">전화번호</label>
+        <div class=" col-md-3">
+            <select class="form-select" id="localNum" required>
+              <option value="">02</option>
+              <option>031</option>
+              <option>032</option>
+              <option>033</option>
+              <option>041</option>
+              <option>042</option>
+              <option>043</option>
+              <option>044</option>
+              <option>051</option>
+              <option>052</option>
+              <option>053</option>
+              <option>054</option>
+              <option>055</option>
+              <option>061</option>
+              <option>062</option>
+              <option>063</option>
+              <option>064</option>
+            </select>
+          <div class="invalid-feedback">
+            지역번호를 선택하세요.
+          </div>
+        </div>
+        <div class="col-md-9">
+            <input type="text" class="form-control" id="telephone" placeholder="'-'없이 입력" required>
+              <div class="invalid-feedback">
+                전화번호를 입력하세요.
+              </div>
+        </div>
+        <div class=" mb-3 " >
+          <p class="fw-bold" id="adressCom">주소</p>
+          <input type="text" placeholder="" name="post1" id="post1" class="form-control  mb-1" value="" style="display:inline-block;width:100px;"> 
+            <button id="search" onclick="sample6_execDaumPostcode()" style="color: white; background-color: #A5E374;">주소검색</button>
+            <input type="text"  name="address1" id="address1" class="form-control  mb-1" value="" placeholder="주소">
+            <input type="text" name="address1" id="address1" class="form-control mb-3 col-md-7" value="" placeholder="상세주소">
+          </div>
+          <div id="signUp" >
+            <button type="submit" value="Send" class="btn-xlarge"  style="color: white; background-color: #A5E374;">가입하기</button>
+          </div>
+    </div>
+  </div>       
+    
+  </form>
+    <div  id="ifUHave">
+      <p class="text-center mt-3 text-secondary">만약 계정이 있으시다면, <a href="loginpage.html">로그인 하세요.</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- 푸터 -->
+  <div class="poot">
+    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+      <div class="col mb-3">
+        <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+        </a>
+        <img src="img/logo.png" alt="logoimg" id="logo">
+      </div>
+      <div class="col mb-3">
+      </div>
+  
+      <div class="col mb-3">
+        <h5>임시</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+  
+      <div class="col mb-3">
+        <h5>임시</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+  
+      <div class="col mb-3">
+        <h5>임시</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+    </footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

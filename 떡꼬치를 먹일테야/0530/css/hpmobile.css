@@ -1,0 +1,22 @@
+/* Mobile ver */
+body {margin: 0 auto; background-color:#ADD9F7;}
+/* 헤더 */
+header {height: 50px;}
+h1 { color:#F21326; text-align: center; font-size: 40px;}
+/* nav */
+h2{color: #F26F63;}
+p{color: #4BB2F2;}
+.navi {background-color: #4BB2F2; height: 200px;}
+.navi a {display:block; width: 100%; text-align: center; border-bottom: 1px solid beige; line-height: 50px;}
+.navi a:link, .navi a:visited { color: white;}
+.navi a:hover, .navi a:focus { color: #F26457; text-shadow:2px 2px 2px black;}
+.navi a:active {color: red;}
+/* 본문 */
+section {padding-left: 10px;}
+/* aside */
+aside {margin-top: 10px; padding: 5%;}
+aside img {width: 100%; margin-bottom: 10px;}
+/* footer */
+footer {height:70px ;background-color: rgb(59, 83, 18); 
+    color: white; text-align: center; padding-top: 15px;}
+footer address, footer p {font-size: 12px;}

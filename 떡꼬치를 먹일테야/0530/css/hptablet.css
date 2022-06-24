@@ -1,0 +1,20 @@
+/* Tablet ver */
+body {margin: 0 auto; background-color:beige;}
+/* header */
+header {height: 280px; margin: 0; background: url(../img/cafe.PNG) no-repeat left top; background-size: cover; background-position: center;}
+h1 {display:none;}
+/* nav */
+.navi {background-color: #F26F63; height: 60px;}
+.navi a { display: inline-block; height: 60px; width:24%; text-align: center; line-height: 60px;}
+.navi a:link, .navi a:visited { color: yellow;}
+.navi a:hover, .navi a:focus { color: #8DCBF2; text-shadow:2px 2px 2px black;font-weight: bold; }
+.navi a:active {color: #F26F63;}
+/* container */
+section {position:relative; padding-left: 30px;}
+/* aside */
+aside {margin-top: 20px; padding: 20px 30px ;}
+aside img {width: 300px; height:180px; margin: 10px; }
+/* footer */
+footer { clear: both; height:70px ;background-color: #ACD7F2; 
+    color: white; text-align: center; padding-top: 15px;}
+footer address, footer p {font-size: 13px;}
