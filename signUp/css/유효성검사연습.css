@@ -24,9 +24,8 @@ ul {list-style:none;}
 #signUp{display: flex; justify-content: center; margin-top: 20px;}
 #adressCom{margin-top: 15px;}
 #ifUHave {margin-top: 100px;}
-
-
+#individual{padding: 0;}
 
 
 /*footer*/
-.poot{background-color: #F5F5F5; color: #D9D9D9;}
+.poot{background-color: #F5F5F5; color: #D9D9D9; overflow: hidden;}

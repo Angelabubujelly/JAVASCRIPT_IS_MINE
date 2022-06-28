@@ -1,0 +1,39 @@
+        header{width: 1220px; margin: 0 auto;}
+        /*header*/
+        #logoimg{width: 253.32px; height: 56.82px; display: inline-block;}
+        /*searchbox*/
+        .searchbox{width: 580px; height: 50px; outline: unset; border: none; height: 96%; margin-left: 10px;
+            font-size: 1.3rem; }
+        #searbox{width: 650px; height: 50px; border: 2px solid #A5E374; display: inline-block; margin-left: 27px; margin-top: 100px;
+            border: 5px solid #A5E374; box-shadow: 2px 2px 3px -1px rgba(0, 0, 0, 0.25); border-radius: 6px;}
+        /*searchlogo*/
+        .btn-search {width: 30px; height: 30px; outline: unset; border: none;
+            position: relative;left:  -50px; top: 8px; background-image: url(../img/search.png); background-size: 30px; background-color: white;}
+        /*loginbtn*/
+        #login-btn{text-decoration-line: none;}
+        #log{width: 80px; display: inline; margin-top: 110px; float: right;
+            border: 3px solid #A5E374; border-radius: 5px; background-color: white;color: #8D8D8D; 
+            font-weight: bold; font-size: 1.05rem;}
+        #log:hover{background-color: #A5E374;color: white; font-size: 1.05rem;}
+        /*menu*/
+        #menu>ul{ list-style: none; margin-top: 30px;}
+        .menu{text-decoration-line: none; color: #8D8D8D; display: inline-block; 
+            width: 110px; height: 50px; display: flex; align-items: center; 
+            text-align: center; float: left; font-size: 1.1rem; font-weight: bold;}
+        .menu:hover{color: #A5E374;}
+        /*section*/
+        section{width: 1220px; margin: 0 auto; margin-top: 100px;}
+        /*파워광고*/
+        .sectionimg{text-decoration: none; color: white; font-size: 1.2rem;}
+        .sectionimg:hover{color: #A5E374;}
+        /*일반광고*/
+        .row{margin-top: 10px;}
+        .card{border-top:5px solid #A5E374 ; border-radius: 3px;}
+        .card>img{height: 200px;}
+        .card-body{height: 140px;overflow: hidden;}
+        .card-title{font-weight: bold;}
+        .card-text{font-size: 1.2rem;}
+        .cardlink,.cardlink:hover{text-decoration: none; color: #373F57;}
+        /*footer*/
+        footer{ display: flex; width: auto; height: 240px; background-color: #A5E374;
+            color: white; margin-top: 5vh; font-size: 3rem; align-items: center; justify-content: center;}

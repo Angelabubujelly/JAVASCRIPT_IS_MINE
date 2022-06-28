@@ -1,0 +1,56 @@
+
+/* header */
+header{margin-top: 25px;  display: flex; justify-content: center;}
+#logo{width: 253.32px; height: 56.82px; margin-bottom: 50px;display: flex; }
+/* 선택버튼 */
+.tabs {margin-right:35px; display: flex; justify-content: center;}
+ul {list-style:none;}
+
+#indi_btn a{width: 172px; height: 66px;margin-bottom: 50px; display: flex;
+     justify-content: center; align-items: center;text-decoration: none;
+      background-color: #F0F0F0; color: #858585; border-radius: 7px 0px 0px 7px;}
+#indi_btn a:hover{background-color: #A5E374; color: white;}
+#comp_btn a{width: 172px; height: 66px;margin-bottom: 50px; display: flex; 
+      justify-content: center; align-items: center;text-decoration: none;
+       background-color: #F0F0F0; color: #858585; border-radius: 0px 7px 7px 0px;}
+#comp_btn a:hover{background-color: #A5E374; color: white;}
+
+/* container */
+
+.caution{font-size:small;color: #62AE26;}
+.btn-xlarge{width: 172px; height: 66px;display: flex;align-items: center; justify-content: center;border: white; padding: 18px 28px; font-size: 16px; line-height: normal; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px;}
+.btn-xlarge:visited {border: white; display: flex; justify-content:center;}
+#search {width: 100px; height: 42.5px; color: white; background-color: #62AE26; border: 1px solid white; border-radius: 7px}
+#signUp{display: flex; justify-content: center; margin-top: 20px;}
+#adressCom{margin-top: 15px;}
+#ifUHave {margin-top: 100px;}
+#individual{padding: 0;}
+
+body {
+      min-height: 100vh;
+
+      background: -webkit-gradient(linear, left bottom, right top, from(#92b5db), to(#1d466c));
+      background: -webkit-linear-gradient(bottom left, #92b5db 0%, #1d466c 100%);
+      background: -moz-linear-gradient(bottom left, #92b5db 0%, #1d466c 100%);
+      background: -o-linear-gradient(bottom left, #92b5db 0%, #1d466c 100%);
+      background: linear-gradient(to top right, #92b5db 0%, #1d466c 100%);
+    }
+
+    .input-form {
+      max-width: 680px;
+
+      margin-top: 80px;
+      padding: 32px;
+
+      background: #fff;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+      box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15)
+    }
+
+
+/*footer*/
+.poot{background-color: #F5F5F5; color: #D9D9D9; overflow: hidden;}

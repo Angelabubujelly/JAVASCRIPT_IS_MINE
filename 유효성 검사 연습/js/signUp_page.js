@@ -1,4 +1,4 @@
-
+//개인회원 기업회원 버튼
 $(function() {
   $("#company").hide()
   $("#personButton").click(function(){
@@ -17,7 +17,7 @@ $(function() {
   });
 
 
-
+// 생년월일 select 
     $(document).ready(function(){            
       var now = new Date();
       var year = now.getFullYear();
@@ -44,3 +44,19 @@ $(function() {
       $("#day  > option[value="+day+"]").attr("selected", "true");       
     
   })
+
+  // 유효성검사
+  window.addEventListener('load', () => {
+    const forms = document.getElementsByClassName('validation-form');
+  
+    Array.prototype.filter.call(forms, (form) => {
+      form.addEventListener('submit', function (event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+  
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);

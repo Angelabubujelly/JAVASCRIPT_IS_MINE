@@ -34,6 +34,7 @@
         
     </section>
     <section>
+        
             <div class="container">
                 
                 <div class="row justify-content-center">
@@ -41,15 +42,19 @@
                     <div class="col-10 col-md-8 col-lg-6 col-xl-4">
                     <!-- 사이즈 수정 필요 -->
                         <!-- 개인 내용 -->
+                        <form class="validation-form" novalidate>
                         <div id="individual" class="form-action show container-fluid align-items-center">
                             <div class="row align-items-center mt-4">
+                                <p class="fw-bold">아이디</p>
                                 <div class="col">
-                                    <p class="fw-bold">아이디</p>
+                                    
                                         <input type="text" name="id" class="form-control" placeholder="아이디" required>
                                             <div class="invalid-feedback">
                                                 아이디를 입력하세요.
-                                            </div>
+                                            </div>      
                                 </div>
+                                <button id="search" onclick="sample6_execDaumPostcode()"  style="color: white; background-color: #A5E374;">중복 확인</button>
+                                
                             </div>
                             <div class="row align-items-center mt-4">
                                 <div class="col">
@@ -102,7 +107,7 @@
                             <div class="row align-items-center mt-4">
                                 <div class="col">
                                     <p class="fw-bold">성별 </p>
-                                        <select class="form-select" id="gender" required>
+                                        <select class="form-select" id="gender" >
                                             <option value="">성별</option>
                                             <option>여성</option>
                                             <option>남성</option>
@@ -132,7 +137,7 @@
                                             <option>015</option>
                                             </select>
                                                 <div class="invalid-feedback">
-                                                    앞번호를 선택하세요.
+                                                    식별번호를 선택하세요.
                                                 </div>
                                     </div>
                                     <div class="col">
@@ -146,15 +151,20 @@
                             <div class="row align-items-center mt-4">
                                 <div class="col">
                                     <p class="fw-bold" id="adressCom">주소</p>
-                                    <input type="text" placeholder="" name="post1" id="post1" class="form-control mb-1 " value="" style="display:inline-block;width:100px;"> 
+                                    <input type="text" placeholder="" name="post1" id="post1" class="form-control mb-1 " value="" style="display:inline-block;width:100px;" required> 
                                     <button id="search" onclick="sample6_execDaumPostcode()"  style="color: white; background-color: #A5E374;">주소검색</button>
-                                    <input type="text"  name="address1" id="address1" class="form-control  mb-1" value="" placeholder="주소">
-                                    <input type="text" name="address1" id="address1" class="form-control mb-3 col-md-7" value="" placeholder="상세주소">
+                                    <input type="text"  name="address1" id="address1" class="form-control  mb-1" value="" placeholder="주소" required>
+                                    <input type="text" name="address1" id="address1" class="form-control mb-3 col-md-7" value="" placeholder="상세주소" required>
                                 </div>       
                             </div>
+                            <div id="signUp" >
+                                <button type="submit" value="signUpIndividual" class="btn-xlarge"  style="color: white; background-color: #A5E374;">가입하기</button>
+                            </div> 
                         </div>
+                    </form>
                         <!-- 개인 내용 -->
                         <!-- 기업 내용 -->
+                    <form class="validation-form" novalidate>
                         <div id="company">          
                             <div class="row align-items-center mt-4">
                                 <div class="col">
@@ -225,7 +235,7 @@
                             <div class="row align-items-center mt-4">
                                 <p class="fw-bold">회사 전화번호</p>
                                     <div class="col">
-                                        <select class="form-select" id="localNum" required>
+                                        <select class="form-select" id="localNum">
                                             <option value="">02</option>
                                             <option>031</option>
                                             <option>032</option>
@@ -249,7 +259,7 @@
                                             </div>
                                     </div>
                                     <div class="col">
-                                        <input type="text" class="form-control" id="telePhone" placeholder="'-'없이 입력" required>
+                                        <input type="text" class="form-control" id="telePhone" placeholder="'-'없이 입력" >
                                             <div class="invalid-feedback">
                                                 전화번호를 입력하세요.
                                             </div>
@@ -291,15 +301,17 @@
                                     <input type="text" name="address1" id="address1" class="form-control mb-3 col-md-7" value="" placeholder="상세주소">
                                 </div>       
                             </div>
+                            <div id="signUp" >
+                                <button type="submit" value="signUpCompany" class="btn-xlarge"  style="color: white; background-color: #A5E374;">가입하기</button>
+                            </div>   
                         </div>
-                        <!-- 기업 내용 -->
-                        <div id="signUp" >
-                            <button type="submit" value="Send" class="btn-xlarge"  style="color: white; background-color: #A5E374;">가입하기</button>
-                        </div>   
                     </div>
+                </form>
+                        <!-- 기업 내용 -->
+                        
                 </div>
             </div>
-        </form>
+        
             <div  id="ifUHave">
                 <p class="text-center mt-3 text-secondary">만약 계정이 있으시다면, <a href="logIn_page.html">로그인 하세요.</a></p>
             </div>     
