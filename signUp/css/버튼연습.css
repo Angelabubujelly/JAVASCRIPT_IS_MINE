@@ -1,0 +1,9 @@
+.menu-wrap li{
+display: inline-block;
+background: #dcb8b8;
+padding: 10px;}
+.menu-wrap li.selected{
+background-color:#e26262;
+color:#fff;
+ font-weight:600;
+}
