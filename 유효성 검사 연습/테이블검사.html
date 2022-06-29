@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/signUp_page.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/footers/">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/signUp_page.js"></script>
+    <!-- 다음 지도 -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="daumApi.js"></script> -->
+    <!-- 다음지도 -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <form id="myForm">
+        <input type="password" id="user_pass1" name="user_pass1" placeholder="비밀번호" required 
+        maxLength=20 onInput="maxLengthCheck(this)" onKeyUp="inputDataCheck(this.id)"/>
+        <div class="invalid-feedback">
+        비밀번호를 입력해주세요.
+        </div>
+      
+        <button type="button" onClick="member_submit()" >비밀번호 변경</button>
+      </form>
+      
+      
+      <script>
+      
+          function maxLengthCheck(object) {
+            if (object.value.length > object.maxLength) {
+                object.value = object.value.slice(0, object.maxLength);
+            }
+          }
+      
+          let inputDataCheck = (id) => {
+              if (id) {            
+                  $("#" + id).removeClass("is-invalid");
+              }
+          }
+          
+          //submit 눌렀을때 member_submit 함수 실행
+          function member_submit(){
+            //값 비어있으면
+            if($("#user_pass1").val() == ""){
+                // is-invalid 클래스를 붙여줘서 빨간 경고문구 붙여준다
+                $("#user_pass1").addClass("is-invalid");
+                // 입력해야되는 창에 어그로
+                $("#user_pass1").focus();
+                return;
+            }
+            
+            //submit 처리
+          }
+          </script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
