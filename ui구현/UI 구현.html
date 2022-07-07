@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding: 0; margin: 0;}
+        header{height: 15vh; background-color: #B1C6BF;}
+        header>div:nth-child(1){width: 70vw; height: 2vh; margin: 0 auto; background-color: #658A9E; border-radius: 0 0 50px 50px;}
+        header>div:nth-child(2){width: 70vw; height: 10vh; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;}
+        header>div:nth-child(2)>div:nth-child(1){display: flex; align-items: center; color: #423d3d;}
+        header>div:nth-child(2)>div:nth-child(1)>span:nth-child(1){font-size: 35px; font-weight: 700; margin-right: 10px;}
+        header>div:nth-child(2)>div:nth-child(2)>img{width: 1.2vw; height: 1.2vw; margin: 0 7px; object-fit: cover;}
+        ul{list-style: none; display: flex;}
+        nav>ul:nth-child(1){justify-content: right;}
+        nav>ul:nth-child(1)>li{width: 15vw; text-align: center; background-color: #423d3d; color: white; font-size: 22px; font-weight: 700;}
+        nav>ul:nth-child(1)>li:nth-child(4){background-color: #2b2727;}
+        nav>ul:nth-child(2){justify-content: right; position: relative; z-index: 10;}
+        nav>ul>li>ul{flex-direction: column;}
+        nav>ul:nth-child(2)>li{width: 15vw; text-align: center; background-color: rgba(255, 255, 255, 0.5); font-weight: 700; display: none;}
+        section{overflow: hidden;}
+        /* 슬라이드 */
+        article:nth-child(1){width: 100vw; height: 70vh; position: relative;}
+        article:nth-child(1)>img{width: 100vw; height: 70vh; object-fit: cover; position: absolute;}
+        /* 슬라이드 끝 */
+        article:nth-child(2){margin: 35px 0 8px; display: flex; justify-content: right;}
+        article:nth-child(2)>p{margin: 0 12px;}
+        article:nth-child(2)>p>span{margin-right: 7px;}
+        article:nth-child(2)>button{margin: 0 20px; padding: 0 10px;}
+        article:nth-child(3){display: flex;}
+        article:nth-child(3)>div:nth-child(1){width: 70vw; margin: 0 40px;}
+        article:nth-child(3)>div:nth-child(1)>div{margin: 30px 0; display: flex; align-items: center; justify-content: space-between;}
+        article:nth-child(3)>div:nth-child(1)>div>button{border: none; background: none;}
+        article:nth-child(3)>div:nth-child(1)>div>button>img{width: 3vw; height: 3vw; object-fit: cover;}
+        article:nth-child(3)>div:nth-child(1)>div>div{width: 80%; overflow: hidden;}
+        article:nth-child(3)>div:nth-child(1)>div>div>div{width: 208%; display: flex; justify-content: space-between; margin-left: -54%;}
+        article:nth-child(3)>div:nth-child(1)>div>div>div>img{width: 10vw; height: 15vw; object-fit: cover;}
+        article:nth-child(3)>div:nth-child(1)>p{margin-bottom: 20px;}
+        article:nth-child(3)>div:nth-child(2){width: 20vw; padding-left: 40px; align-self: flex-end;}
+        article:nth-child(3)>div:nth-child(2)>img{width: 17vw;}
+        footer{height: 12vh; background-color: #658A9E; display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; color: white; font-style: italic;}
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        $(function(){
+            $("nav>ul:nth-child(1)").mouseover(function(){
+                $("nav>ul:nth-child(2)>li").stop().slideDown()
+            })
+            $("nav>ul:nth-child(1)").mouseleave(function(){
+                $("nav>ul:nth-child(2)>li").stop().slideUp()
+            })
+
+            var x = $("article:nth-child(1)>img")
+            var y = 3;
+            setInterval(function(){
+                y--;
+                if(y==0){
+                    x.fadeIn();
+                    y = 3;
+                } else {
+                    x.eq(y).fadeOut();
+                }
+            },2000)
+
+            let sli = $("article:nth-child(3)>div:nth-child(1)>div>div>div")
+
+            $("#arrowLeft").click(function(){
+                sli.animate({"margin-left":"-81%"}, function(){
+                    sli.removeAttr("style").children(":first").appendTo(sli);
+                });
+                        
+            })
+            $("#arrowRight").click(function(){
+                sli.animate({"margin-left":"-27%"}, function(){
+                    sli.removeAttr("style").children(":last").prependTo(sli);
+                });         
+            })
+            
+        })
+    </script>
+</head>
+<body>
+    <header>
+        <div></div>
+        <div>
+            <div><span>CA</span><span>세계의 디자인을 보는 창</span></div>
+            <div>
+                <img src="img/email.png">
+                <img src="img/facebook-app-symbol.png">
+                <img src="img/instagram.png">
+                <img src="img/b.png">
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li>MAGAZINE</li>
+                <li>CONFERENCE</li>
+                <li>BOOKS</li>
+                <li>ABOUT</li>
+            </ul>
+            <ul>
+                <li>
+                    <ul>
+                        <li>월간</li>
+                        <li>계절</li>
+                        <li>년간</li>
+                        <li>기타</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li>임상CONFER</li>
+                        <li>KOREACONFER</li>
+                        <li>WORLD CONFER</li>
+                        <li>RLXK CONFER</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li>베스트샐러</li>
+                        <li>국내도서</li>
+                        <li>외국도서</li>
+                        <li>웹소설/코믹</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li>CA에 대하여</li>
+                        <li>연혁</li>
+                        <li>윤리공정/공정거래</li>
+                        <li>오시는 길</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <article>
+            <img src="img/main1.jpg">
+            <img src="img/main2.jpg">
+            <img src="img/main3.jpg">
+        </article>
+        <article>
+            <p><span>ID</span><input></p>
+            <p><span>PW</span><input></p>
+            <button>로그인</button>
+        </article>
+        <article>
+            <div>
+                <div>
+                    <button id="arrowLeft"><img src="img/arrow-left.png"></button>
+                    <div>
+                        <div>
+                            <img src="img/책그림1.jpg">
+                            <img src="img/책그림2.jpg">
+                            <img src="img/책그림3.jpg">
+                            <img src="img/책그림4.jpg">
+                            <img src="img/책그림5.jpg">
+                            <img src="img/책그림6.jpg">
+                            <img src="img/책그림7.jpg">
+                            <img src="img/책그림8.jpg">
+                        </div>
+                    </div>
+                    <button id="arrowRight"><img src="img/arrow-right.png"></button>
+                </div>
+                <p><b>CA Magazine</b> 세계의 디자인을 보는 창, 디자인 매거진 CA, 세계 곳곳에서 탄생하는 놀라운 작품과 디자이너의 생각, 그리고 창의적인 통찰력을 담아냅니다. 디자인계의 최신 트렌드와 실용적인 인사이트를 통해 새로운 아이디어와 영감을 전합니다. 여유와 깊이를! 연 6회 발행.</p>
+                <p><b>CA Conference</b> 창조적 기업가로서의 디자이너를 위한 강연 - Designer as Author + Entreprenuer(디자이너 + 저작자 + 기업가), 디자이너들의 호기심을 자극하는 창조적인 작업과 창조적 기업가로서의 디자이너를 초청하여 즐길 수 있는 컨퍼런스를 만드는 것입니다.</p>
+            </div>
+            <div>
+                <p>베스트셀러</p>
+                <img src="img/책그림9.jpg">
+            </div>
+        </article>
+    </section>
+    <footer>
+        <p>상호명 (주)퓨처 | 대표 퓨처 | 개인정보관리책임자 퓨처 | 전화 02-852-1234 | 이메일 1234@cadboad.co.kr</p>
+        <p>주소 서울시 구로구 토범진로 448 | 사업자등록번호 214-86-000000 | 통신판매 000000</p>
+        <p>Copyright ⓒ cabooks.co.kr All Right Peserved</p>
+    </footer>
+</body>
+</html>

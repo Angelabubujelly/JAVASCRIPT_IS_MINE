@@ -7,14 +7,14 @@
     <title>Document</title>
     <style>
         body{text-align: center;}
-        img{vertical-align: middle; width: 400px; height: 430px;}
-        .arrow{width: 40px; height: 40px; margin: 50px;}
-        #gallery{width: 400px; height: 430px;}
+
+        .arrow{width: 40px; height: 40px; margin: 50px; cursor: pointer;}
+        #gallery{width: 400px; height: 430px; vertical-align: middle;}
     </style>
     <script>
         var num=1;
         function nextGallery(){
-            num++;
+            num++; 
             if(num>7)
             num=1;
             document.getElementById("gallery").src="img/img"+num+".png";
@@ -33,9 +33,7 @@
 <img src="img/left-arrow.png" alt="다음 화살표" class="arrow" onclick="nextGallery()">
 <img src="img/img1.png" alt="그림" id="gallery">
 <img src="img/right-arrow.png" alt="이전 화살표" class="arrow" onclick="prevGallery()">
-<br><br><br>
-<button onclick="prevGallery">이전</button>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-<button onclick="nextGallery">다음</button>
+
 
 </body>
 </html>

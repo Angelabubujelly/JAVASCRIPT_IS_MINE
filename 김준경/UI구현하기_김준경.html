@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/UI구현하기_김준경.css" rel="stylesheet">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery-user.js"></script>
+</head>
+<body>
+    <header>
+        <div>
+        <div class="title">
+            <img src="img/logo.png" alt="">
+            &emsp;세계의 디자인을 보는 창
+        </div>
+        <div class="sns">
+           <img src="img/gmail.png" alt="">
+           <img src="img/facebook.png">
+           <img src="img/instagram.png">
+           <img src="img/blog.png" alt="">
+        </div>
+        </div>
+    </header>
+    <nav>
+        <ul class="nav">
+            <li><a href="#">MAGAZINE</a>
+                <ul class="submenu">
+                    <li>월간</li>
+                    <li>계절</li>
+                    <li>년간</li>
+                    <li>기타</li>
+                </ul>
+            </li>
+            <li><a href="#">CONFERENCE</a>
+                <ul class="submenu">
+                    <li>임상CONFER</li>
+                    <li>KOREA CONFER</li>
+                    <li>WORLD CONFER</li>
+                    <li>RLXK CONFER</li>
+                </ul>
+            </li>
+            <li><a href="#">BOOKS</a>
+                <ul class="submenu">
+                    <li>베스트셀러</li>
+                    <li>국내도서</li>
+                    <li>외국도서</li>
+                    <li>웹소설/코믹</li>
+                </ul>
+            </li>
+            <li><a href="#">ABOUT</a>
+                <ul class="submenu">
+                    <li>CA에 대하여</li>
+                    <li>연혁</li>
+                    <li>윤리공영/공정거래</li>
+                    <li>오시는 길</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <article class="booksPic">
+            <div>
+                <img src="img/books1.jpg" alt="책사진1">
+                <img src="img/books2.jpg" alt="책사진2">
+                <img src="img/books3.jpg" alt="책사진3">
+            </div>
+        </article>
+        <div class="login">     
+            ID <input class="box"> PW <input class="box" type="password"> <button type="submit">로그인</button>
+        </div>
+        <br><br>
+    </section>
+
+    <section>
+        <div class="book">
+            <div class="shelf">
+                <input type="radio" name="slide" id="slide01" checked>
+                <input type="radio" name="slide" id="slide02">
+                <input type="radio" name="slide" id="slide03">
+                <input type="radio" name="slide" id="slide04">
+                <input type="radio" name="slide" id="slide05">
+                <input type="radio" name="slide" id="slide06">
+                <input type="radio" name="slide" id="slide07">
+        
+                <div class="slidewrap">
+                    <ul class="slidelist">
+                        <li>
+                            <a>
+                                <label for="slide07" class="left"></label>
+                                <img src="img/slide01.jfif">
+                                <label for="slide02" class="right"></label>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <label for="slide01" class="left"></label>
+                                <img src="img/slide02.jfif">
+                                <label for="slide03" class="right"></label>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <label for="slide02" class="left"></label>
+                                <img src="img/slide03.jfif">
+                                <label for="slide04" class="right"></label>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <label for="slide03" class="left"></label>
+                                <img src="img/slide04.jfif">
+                                <label for="slide05" class="right"></label>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <label for="slide04" class="left"></label>
+                                <img src="img/slide05.jfif">
+                                <label for="slide06" class="right"></label>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <label for="slide05" class="left"></label>
+                                <img src="img/slide06.jfif">
+                                <label for="slide07" class="right"></label>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <label for="slide06" class="left"></label>
+                                <img src="img/slide07.jfif">
+                                <label for="slide01" class="right"></label>
+                            </a>
+                        </li>
+                    </ul>
+                    <img src="img/left-arrow.png" alt="" class="arrow">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                    <img src="img/right-arrow.png" alt="" class="arrow">
+                    <div class="said">
+                        <br>
+                    <b>CA magazine</b>세계의 디자인을 보는 창, 디자인 매거진 CA. 세계 곳곳에서 탄생하는 놀라운 작품과 디자이너의 생각, 그리고 창의적인 통찰력을<br>
+                    담아냅니다. 디자인계의 최신 트렌드와 실용적인 인사이트를 통해 새로운 아이디어와 영감을 전합니다. 여유와 깊이들! 연 6회 발행<br><br>
+                    <b>CA Conference</b>창조적 기업가로서의 디자이너를 위한 강연 - Designer as Author + Entrepreneur(디자이너 + 저작자 + 기업가). 디자이너들의<br>
+                    호기심을 자극하는 창조적인 작업과 창조적 기업가로서의 디자이너를 초청하여 즐길 수 있는 컨퍼런스를 만드는 것입니다.
+                    </div>
+                </div>
+        <div class="bestSeller">
+            <br>
+            <p>베스트셀러</p>
+            <img src="img/best.jfif" alt="">
+        </div>
+            </div>
+        
+
+            
+
+    
+    </div>
+
+
+    </section>
+    <footer>
+        <br>
+        상호명 (주)퓨처 | 대표 | 퓨처 | 개인정보관리책임자 퓨처 | 전화 02-852-1234 | 이메일 | 1234@books.co.kr<br>
+        주소 서울시 구로구 도림전로 48 | 사업자등록번호 214.86.000000 | 통신판매 000000<br>
+        Copyright © 2022 HRD All rights reserved.
+    </footer>
+</body>
+</html>
