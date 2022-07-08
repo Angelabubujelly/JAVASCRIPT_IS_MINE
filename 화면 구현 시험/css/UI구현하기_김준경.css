@@ -1,0 +1,41 @@
+/* header */
+* { list-style: none; text-decoration: none; margin: 0 auto; padding: 0; color: black;}
+body {width:1280px; height: 200px; background-repeat: no-repeat; background-position-x: center;}
+ /* Header */
+ header {height: 150px;}
+ header nav {float: right;}
+ header .logo {position:relative; top:20px; right: 60px; margin-top: 30px; margin-left: 200px;}
+ header .hdTxt {position:relative; color: white; top:13px; right: 55px; font-size:larger; font-weight: bold;}
+ header .sns{position:relative; top:20px; left: 450px; margin-left: 40px;}
+ .headertext {color: white; margin-left: 50px;}
+ a {color: white; }
+ a:hover {background-color: rgb(221, 242, 243); }
+ nav{height: 30px;}
+ .nav{position: relative; top:12px; width: 600px; height: 30px; margin-top:40px; background-color: rgb(189, 208, 212); }
+ .nav > li {float: left; position:relative; text-align:center; width: 150px;  color: white; margin-top: 4px; font-weight: bold;}
+ .nav > li:hover {background-color: lightblue; color: white;}
+ .submenu {display: none; width: 100%; position: absolute; z-index: 1;}
+ .submenu li {padding: 5px 0; z-index: 2; background-color: rgba(238, 255, 254, 0.466);}
+ .submenu li:hover {background-color: rgb(221, 242, 243); color: lightblue;}
+
+  /* section */
+ .slide {clear: both; position: relative; height: 400px; overflow: hidden;}
+ .slide img {position:absolute;}
+ .login { width: 1280px; height: 40px; margin-left: 900px; margin-top: 10px; }
+ .bookShelf { width: 1000px; height: 120px; display: flex; float: left; } 
+ .bookShelf > img { width: 30px; height: 30px; cursor: pointer; margin-top: 90px;}
+ .frame {width:480px; height:150px; position: relative; margin-bottom: 30px; margin-top: 30px;
+     overflow: hidden; display: flex; clear: both;}
+ .books {margin-left: 60px; width: 90px;}
+ .gallery {position: absolute; display: flex; clear: both;}
+ .best {width: 280px; height: 300px; text-align: right; float: right;}
+ .best img {width: 200px;}
+ .best b {text-align: left; margin-left: 100px;}
+ .text {width: 1000px; height: 180px; float: left; font-size: 15px; margin-top: 60px;}
+ .text span {font-weight: bold;}
+
+ 
+/* Footer */
+footer{position: absolute;font-size: xx-small; text-align: center;
+    font-style: italic;width: 100%;top: 960px;height: 90px; width: 1280px;
+    background-color: rgb(221, 242, 243);text-align: center;}

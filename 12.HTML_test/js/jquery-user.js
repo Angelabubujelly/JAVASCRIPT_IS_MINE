@@ -8,7 +8,7 @@ $(function () {
     });
 
 //fadeIn_Out
-var x = $(".slide img");
+var x = $(".gallery books");
 var y = 3;
 setInterval(function(){
     y--;
